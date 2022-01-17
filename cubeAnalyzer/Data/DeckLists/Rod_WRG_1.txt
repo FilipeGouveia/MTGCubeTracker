@@ -1,0 +1,36 @@
+Colors: WRG
+Archetype: 
+MatchRecord: 2-1
+GamesRecord: 4-2
+Author: Rod
+Date: 30/10/2021
+
+1 Goblin Banneret
+1 Prey Upon
+1 Firebolt
+1 Untamed Kavu
+1 Mother Bear
+1 Viridian Emissary
+1 Silverchase Fox
+1 Sigil Blessing
+1 Seal Away
+1 Papão Brutamontes
+1 Tuskguard Captain
+1 Legionário Cavaleiro da Noite
+1 Squirrel Nest
+1 Anel do Esquecimento
+1 Longshot Squad
+1 Ivy Lane Denizen
+1 Furnace Whelp
+1 Ghor-Clan Rampager
+1 Goldnight Commander
+1 Patrulheiro da Ordem do Zimbro
+1 Overrun
+1 Predador da Escama Dilacerante
+1 Gruul Ragebeast
+1 Portão da Guilda Selesnya
+1 Boros Guildgate
+1 Portão da Guilda Gruul
+5 Forest
+5 Mountain
+4 Plain

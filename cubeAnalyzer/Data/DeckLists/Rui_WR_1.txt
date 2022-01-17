@@ -1,0 +1,34 @@
+Colors: WR
+Archetype: 
+MatchRecord: 2-1
+GamesRecord: 4-2
+Author: Rui
+Date: 30/10/2021
+
+1 Firebolt
+1 Barreira de Descartáveis
+1 Reckless Charge
+1 Healer's Hawk
+1 Justiça Veloz
+1 Emberwide Augur
+1 Demônio Fornalha
+1 Mogg War Marshal
+1 Raise the Alarm
+1 Ordem do Grilo Dourado
+1 Boros Challenger
+1 Myr Temerário
+1 Luz Devoradora
+1 Arquétipo da Coragem
+1 Emancipation Angel
+1 Pegasus Courser
+1 Vesperlark
+1 Brimstone Volley
+1 Flametongue Kava
+1 Maaka da Faixa de Escombros
+1 Semeador de Sono
+1 Espirito de Vale Seco
+1 Parhelion Patrol
+1 Heroic Reinforcements
+1 Portão da Guilda Boros
+9 Plains
+6 Mountain

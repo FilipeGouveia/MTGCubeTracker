@@ -1,0 +1,33 @@
+Colors: UR
+Archetype: 
+MatchRecord: 0-3
+GamesRecord: 0-6
+Author: Patricia
+Date: 30/10/2021
+
+1 Retorno Mistico
+2 Dissipar
+1 Sincopar
+1 Think Twice
+1 Peel from Reality
+1 Espalhar Essência
+1 Negar
+1 Opt
+1 Silent Departure
+1 Quimera Presciente
+1 Arqueomante
+1 Charmbreaker Devils
+1 Guttersnipe
+1 Transportador de Brasa
+1 Act of Treason
+1 Lightning Strike
+1 Pilar de Chamas
+1 Melek, Izzet Paragon
+2 Wee Dragonauts
+1 Geléctrodo
+1 Electromante Goblin
+1 Izzet Keyrune
+1 Vastidão Morfoterrena
+1 Portão da Guilda Izzet
+8 Island
+6 Mountain

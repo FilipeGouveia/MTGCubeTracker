@@ -1,0 +1,32 @@
+Colors: BR
+Archetype: 
+MatchRecord: 2-1
+GamesRecord: 4-2
+Author: Tiago
+Date: 30/10/2021
+
+1 Pilar de Chamas
+1 Marechal-de-Guerra Mogg
+1 Brain Maggot
+1 Esqueleto Remontado
+1 Ghoulcaller's Accomplice
+1 Reave Soul
+1 Lightning Strike
+2 Liliana's Specter
+1 Weaponcraft Enthusiast
+1 Phyrexian Rager
+1 Wojek Bodyguard
+1 Brimstone Volley
+1 Detonar
+1 Seal of Doom
+1 Falkenrath Noble
+1 Cultista Skirsdag
+1 Keldon Raider
+1 Exarca Tumbeiro
+1 Explosão Sulfurosa
+1 Whip of Erebos
+1 Harvester of Souls
+1 Bogardan Hellkite
+1 Portão da Guilda Rakdos
+8 Swamp
+8 Mountain

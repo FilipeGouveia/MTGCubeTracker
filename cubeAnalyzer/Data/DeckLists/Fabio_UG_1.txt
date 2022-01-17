@@ -1,0 +1,33 @@
+Colors: WB
+Archetype: 
+MatchRecord: 2-1
+GamesRecord: 4-2
+Author: Fábio
+Date: 30/10/2021
+
+1 Llanowar Elves
+1 Witching Well
+2 Aether Spellbomb
+2 Cápsula do Executor
+1 Mago Lazur
+1 Trinket Mage
+1 Coatl das Escamas Sábias
+1 Lorescale Coatl
+1 Eternal Witness
+1 Fertilidio
+1 Espasmo de Crescimento
+1 Charmed Sleep
+1 Chave Rúnica Simic
+1 Golgari Keyrune
+1 Mist Raven
+1 Skyrider Patrol
+1 Ladra dos Turbilinos
+1 Mulldrifter
+1 Mind Control
+1 Terra Stomper
+1 Affectionate Indrik
+1 Meteor Golem
+1 Vastidão Morfoterrena
+1 Portão da Guilda Simic
+7 Island
+7 Forest

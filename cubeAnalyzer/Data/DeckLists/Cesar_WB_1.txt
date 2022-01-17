@@ -1,0 +1,32 @@
+Colors: WB
+Archetype: 
+MatchRecord: 1-2
+GamesRecord: 2-4
+Author: César
+Date: 30/10/2021
+
+1 Viajante Condenado
+1 Hopeful Eidolon
+1 Carniçal do Cemitério do Terror
+1 Ethereal Armor
+1 Cloudshift
+1 Tragic Slip
+1 Underworld Coinsmith
+1 Carniceiro Velocino-de-Nyx
+1 Fencing Ace
+2 Baleful Eidolon
+1 Provação de Heliode
+1 Ordeal of Herebos
+1 Fiend Hunter
+1 Espíritos Abençoados
+1 Observant Alseid
+1 Guardião Sinistro
+1 Witch's Mist
+1 Glimmerpoint Stag
+1 One Thousand Lashes
+1 Doomwake Giant
+1 Phyrexian Plaguelord
+1 Treasury Thrull
+1 Portão da Guilda Orzhov
+8 Plains
+8 Swamp
