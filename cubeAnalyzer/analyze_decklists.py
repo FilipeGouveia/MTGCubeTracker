@@ -27,6 +27,8 @@ def fetch_card(name):
     card = {}
     try:
         card_data = scrython.cards.Named(fuzzy=name)
+        if(card_data.lang != "EN"):
+            card_data = scrython.cards.Named(fuzzy=card_data.name())
         card['name'] = card_data.name()
         card['color'] = card_data.color_identity()
         card['cmc'] = card_data.cmc()
@@ -49,7 +51,7 @@ def make_deck(infile):
 
     maindeck, side = [], []
 
-    with open(infile) as deck_file:
+    with open(infile, encoding='utf-8') as deck_file:
 
         #TODO
         # extract deck "meta-data" - the colors, archetypes, and game records. Does not currently do anything with match records
@@ -90,11 +92,13 @@ def make_deck(infile):
         deck_color = metadata['Colors'].strip(' ')
         deck_archetypes = metadata['Archetype'].strip(' ').split('_') 
         deck_record = list(map(float,metadata['MatchRecord'].strip(' ').split('-')))
+        date = metadata['Date'].strip(' ')
+        author = metadata['Author'].strip(' ')
         win, loss = deck_record
 
 
 
-    return maindeck, side, deck_color, deck_archetypes, win, loss
+    return maindeck, side, deck_color, deck_archetypes, win, loss, date, author
 
 
 """         deck_color = summary[0].split(':')[1].strip(' ')
@@ -113,7 +117,7 @@ def make_deck(infile):
                 cards.extend([card]*int(num)) """
 
 
-def extract_decklists(directory, date_arg):
+def extract_decklists(directory):
 
     '''Parses all the decklists in a directory and creates a dictionary to contain this info.'''
     misspellings = open('misspellings.txt', 'w')
@@ -130,10 +134,9 @@ def extract_decklists(directory, date_arg):
         # attempt to analyze decklist. If unable, skip it. Will extract date if it exists.
         try:
             #TODO
-            maindeck, side, color, archetypes, win, loss = make_deck(os.path.join(directory,infile))
+            maindeck, side, color, archetypes, win, loss, date, author = make_deck(os.path.join(directory,infile))
             
-            if date_arg:
-                date = infile.split('_')[-1][:-4]
+
         except:
             print('File {} could not be analyzed.'.format(infile))
             continue
@@ -152,8 +155,8 @@ def extract_decklists(directory, date_arg):
                         magic_cards[scry_card['name']] = scry_card
 
 
-        deck_dict[i] = {'main': maindeck, 'side': side, 'color': color, 'archetypes': archetypes, 'record':[win, loss]}
-        if date_arg: deck_dict[i]['date'] = date
+        deck_dict[i] = {'main': maindeck, 'side': side, 'color': color, 'archetypes': archetypes, 'record':[win, loss], 'date': date, 'author': author}
+
     
     return deck_dict, magic_cards, magic_translation_dict
 
@@ -386,7 +389,7 @@ def main():
     window = args.window
 
     # extract decklists 
-    deck_dict = extract_decklists(decklist_folder, date_arg)
+    deck_dict, magic_cards, magic_translation_dict = extract_decklists(decklist_folder, date_arg)
     print('{} decks extracted.'.format(len(deck_dict)))
 
     # export the card, archetype, and color analysis

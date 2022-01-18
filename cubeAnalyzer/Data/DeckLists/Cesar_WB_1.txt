@@ -1,5 +1,5 @@
 Colors: WB
-Archetype: Midrange_Enchantments
+Archetype: Aggro_Enchantments
 MatchRecord: 1-2
 GamesRecord: 2-4
 Author: César
@@ -12,7 +12,7 @@ Decklist:
 1 Cloudshift
 1 Tragic Slip
 1 Underworld Coinsmith
-1 Carniceiro Velocino-de-Nyx
+1 Carneiro Velocino-de-Nyx
 1 Fencing Ace
 2 Baleful Eidolon
 1 Provação de Heliode

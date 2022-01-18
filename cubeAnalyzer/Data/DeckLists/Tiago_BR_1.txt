@@ -1,5 +1,5 @@
 Colors: BR
-Archetype: Aggro
+Archetype: Aggro_Sacrifice
 MatchRecord: 2-1
 GamesRecord: 4-2
 Author: Tiago
