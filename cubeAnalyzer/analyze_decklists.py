@@ -32,7 +32,7 @@ def fetch_card(name):
         card['name'] = card_data.name()
         card['color'] = card_data.color_identity()
         card['cmc'] = card_data.cmc()
-        card['type_line'] = card_data.type_line()
+        card['type'] = card_data.type_line()
         card['scryfall_uri'] = card_data.scryfall_uri()
         images = card_data.image_uris()
         if "normal" in images:
@@ -215,7 +215,10 @@ def export_card_analysis(deck_list_dict, magic_cards, card_filter, archetype_dic
 
     # extract information about the cards from scryfall dictionary
     for card in card_dict.keys():
-        color, cmc, card_type = magic_cards[card].values()
+        #color, cmc, card_type = magic_cards[card].values()
+        color = magic_cards[card]['color']
+        cmc = magic_cards[card]['cmc']
+        card_type = magic_cards[card]['type']
 
         # add card characteristics
         for characteristic, value in zip(['color', 'cmc', 'type'], [color, cmc, find_card_type(card_type)]):
@@ -389,7 +392,7 @@ def main():
     window = args.window
 
     # extract decklists 
-    deck_dict, magic_cards, magic_translation_dict = extract_decklists(decklist_folder, date_arg)
+    deck_dict, magic_cards, magic_translation_dict = extract_decklists(decklist_folder)
     print('{} decks extracted.'.format(len(deck_dict)))
 
     # export the card, archetype, and color analysis
