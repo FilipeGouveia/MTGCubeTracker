@@ -1,10 +1,10 @@
 Colors: WRG
-Archetype: 
+Archetype: Midrange
 MatchRecord: 2-1
 GamesRecord: 4-2
 Author: Rod
 Date: 30/10/2021
-
+Decklist:
 1 Goblin Banneret
 1 Prey Upon
 1 Firebolt

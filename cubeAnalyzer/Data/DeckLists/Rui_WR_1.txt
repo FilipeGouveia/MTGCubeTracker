@@ -1,10 +1,10 @@
 Colors: WR
-Archetype: 
+Archetype: Aggro
 MatchRecord: 2-1
 GamesRecord: 4-2
 Author: Rui
 Date: 30/10/2021
-
+Decklist:
 1 Firebolt
 1 Barreira de Descartáveis
 1 Reckless Charge

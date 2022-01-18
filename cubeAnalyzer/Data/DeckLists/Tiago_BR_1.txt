@@ -1,10 +1,10 @@
 Colors: BR
-Archetype: 
+Archetype: Aggro
 MatchRecord: 2-1
 GamesRecord: 4-2
 Author: Tiago
 Date: 30/10/2021
-
+Decklist:
 1 Pilar de Chamas
 1 Marechal-de-Guerra Mogg
 1 Brain Maggot

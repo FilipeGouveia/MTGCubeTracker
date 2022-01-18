@@ -53,8 +53,51 @@ def make_deck(infile):
 
         #TODO
         # extract deck "meta-data" - the colors, archetypes, and game records. Does not currently do anything with match records
-        summary = [line.strip('\n') for line in deck_file.readlines()]
-        deck_color = summary[0].split(':')[1].strip(' ')
+
+        lines = [line.strip('\n') for line in deck_file.readlines()]
+
+        metadata = {}
+        decklist = 0
+        cards = []
+
+        #introduzir um separador Decklist: nas listas acima das cartas para ajudar a fazer tudo no mesmo loop e permitir qualquer quantidade de 'metadados'
+        for line in lines:
+            if(decklist==1):
+                #TODO inalterado do original para perceber melhor a logica depois
+                #Neste ponto sabemos que estamos a iterar a lista em si
+                if line == '':
+                    cards.extend([line])
+                    continue
+                else:
+                    num, card = line.split(' ')[0],' '.join(line.split(' ')[1:])
+                    cards.extend([card]*int(num))
+            elif(line == 'Decklist:'):
+                #encontrado o separador de decklist
+                decklist = 1
+            elif(decklist == 0):
+                #carregar metadados (WR, Archetypes, etc) para um dictionary para ser expansivel para o infinito e mais alem
+                key, value = line.split(':')
+                metadata[key] = value
+        try:
+            div = cards.index('')
+            maindeck, side = cards[:div], cards[div+1:]
+        except:
+            maindeck = cards
+            side = []
+
+
+        #print(metadata)
+        deck_color = metadata['Colors'].strip(' ')
+        deck_archetypes = metadata['Archetype'].strip(' ').split('_') 
+        deck_record = list(map(float,metadata['MatchRecord'].strip(' ').split('-')))
+        win, loss = deck_record
+
+
+
+    return maindeck, side, deck_color, deck_archetypes, win, loss
+
+
+"""         deck_color = summary[0].split(':')[1].strip(' ')
         deck_archetypes = summary[1].split(':')[1].strip(' ').split('_') # archetypes in Aggro, Midrange, Control, Combo
         deck_record = list(map(float,summary[3].split(':')[1].strip(' ').split('-')))
 
@@ -67,16 +110,8 @@ def make_deck(infile):
                 continue
             else:
                 num, card = card_info.split(' ')[0],' '.join(card_info.split(' ')[1:])
-                cards.extend([card]*int(num))
-        try:
-            div = cards.index('')
-            maindeck, side = cards[:div], cards[div+1:]
-        except:
-            maindeck = cards
-            side = []
-        win, loss = deck_record
+                cards.extend([card]*int(num)) """
 
-    return maindeck, side, deck_color, deck_archetypes, win, loss
 
 def extract_decklists(directory, date_arg):
 
@@ -119,7 +154,7 @@ def extract_decklists(directory, date_arg):
 
         deck_dict[i] = {'main': maindeck, 'side': side, 'color': color, 'archetypes': archetypes, 'record':[win, loss]}
         if date_arg: deck_dict[i]['date'] = date
-
+    
     return deck_dict, magic_cards, magic_translation_dict
 
 def find_card_type(full_type):

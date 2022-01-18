@@ -1,10 +1,10 @@
 Colors: UR
-Archetype: 
+Archetype: Tempo_Insor
 MatchRecord: 0-3
 GamesRecord: 0-6
 Author: Patricia
 Date: 30/10/2021
-
+Decklist:
 1 Retorno Mistico
 2 Dissipar
 1 Sincopar

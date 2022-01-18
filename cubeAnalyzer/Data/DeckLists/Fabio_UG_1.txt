@@ -1,10 +1,10 @@
 Colors: WB
-Archetype: 
+Archetype: Control
 MatchRecord: 2-1
 GamesRecord: 4-2
 Author: Fábio
 Date: 30/10/2021
-
+Decklist:
 1 Llanowar Elves
 1 Witching Well
 2 Aether Spellbomb

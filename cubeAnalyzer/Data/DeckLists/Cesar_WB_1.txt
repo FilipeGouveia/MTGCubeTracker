@@ -1,10 +1,10 @@
 Colors: WB
-Archetype: 
+Archetype: Midrange_Enchantments
 MatchRecord: 1-2
 GamesRecord: 2-4
 Author: César
 Date: 30/10/2021
-
+Decklist:
 1 Viajante Condenado
 1 Hopeful Eidolon
 1 Carniçal do Cemitério do Terror
