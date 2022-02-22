@@ -436,9 +436,10 @@ def main():
     
     print('Exporting cube analysis to Excel...')
     sheet_names = ['Archetypes', 'Win %', 'Norm %', 'Main %', 'Colors']
+    #requires pip package openpyxl
     with pd.ExcelWriter('Cube_Analysis.xlsx') as writer:  
         for df, name in zip([archetype_df, win_df, norm_df, main_df, color_df], sheet_names):
-            df.to_excel(writer, sheet_name = name, index = False)
+            df.to_excel(writer, sheet_name = name, index = False, na_rep='NA')
 
     # if specified, output time course analysis too.
     if date_arg: 
