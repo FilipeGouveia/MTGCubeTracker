@@ -334,14 +334,18 @@ def export_color_analysis(deck_dict, magic_translation_dict, magic_cards):
     
     # loop through decklists, and for each extract the deck colors and the colors of the nonland cards
     for deck in deck_dict.values():
+        main_colors = []
+        for card in deck['main']:
+            if not magic_translation_dict.get(card): continue
+            if find_card_type(magic_cards[magic_translation_dict.get(card)]['type']) == 'Land': continue
+            main_colors.extend(magic_cards[magic_translation_dict.get(card)]['color'])
         
-        main_colors = [magic_cards[card]['color'] for card in deck['main'] if magic_cards.get(card) and find_card_type(magic_cards[card]['type']) != 'Land']
         deck_colors.extend(list(deck['color']))
         colors, counts = np.unique(main_colors, return_counts = True)
         counts = counts/sum(counts)
         color_dict = dict(zip(colors, counts))
 
-        # only consider a color when it is more than 15% of a deck's composition (prevents splashed outliers from shifting the analysis)
+        # only consider a color when it is more than 15% (3 cards) of a deck's composition (prevents splashed outliers from shifting the analysis)
         for color, count in color_dict.items():
             if count > 0.15: card_colors[color].append(count)
 
@@ -425,9 +429,9 @@ def main():
     # export the card, archetype, and color analysis
     print('Analyzing archetypes, cards, and colors...')
     archetype_dict, archetype_df = export_archetype_analysis(deck_dict)
-    print('Analyzing cards, and colors...')
+    #print('Analyzing cards, and colors...')
     win_df, norm_df, main_df = export_card_analysis(deck_dict, magic_translation_dict, magic_cards, card_filter, archetype_dict)
-    print('Analyzing colors...')
+    #print('Analyzing colors...')
     color_df = export_color_analysis(deck_dict, magic_translation_dict, magic_cards)
     
     print('Exporting cube analysis to Excel...')

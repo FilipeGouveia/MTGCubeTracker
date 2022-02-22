@@ -1,4 +1,4 @@
-Colors: WB
+Colors: UG
 Archetype: Control
 MatchRecord: 2-1
 GamesRecord: 4-2
