@@ -1,5 +1,5 @@
 import argparse
-import requests
+#import requests
 import os
 import pandas as pd
 from collections import defaultdict
@@ -9,7 +9,6 @@ from matplotlib import rc
 import matplotlib.pyplot as plt
 import scrython
 
-import pandas as pd
  
 # to read csv file named "samplee"
 # a = pd.read_csv("read_file.csv")

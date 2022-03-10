@@ -99,3 +99,5 @@ This function takes in a number of input trials and simulates a card win rate da
 ### `simulate_rankings`
 
 This function simulates a 10,000 tournament dataset with as many trials as specified, averaging the results over trials. It then produces a graph that depicts the true ranking of cards vs. the simulated ranking. For the example used in the article, I used `trials = 20,000`, which takes about 3 hours to run in total. Note that for this function, the top 23 cards are not selected and all 45 cards are used. This is because selecting the top 23 cards eliminates the ability to evaluate very weak cards, which I wanted to demonstrate with the graph.
+
+
